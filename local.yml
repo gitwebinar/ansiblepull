@@ -1,6 +1,7 @@
 ---
 - hosts: localhost
+  become: yes
   tasks:
     - name: create file
       file: path=/home/administrator/pullnew.txt state=touch
-
+    - user: name=newuser state=present
